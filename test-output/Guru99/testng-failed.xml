@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Failed suite [Guru99]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="classes" name="Register page(failed)">
+    <parameter name="browsername" value="Chrome"/>
+    <classes>
+      <class name="Guru99.Loginpagetest">
+        <methods>
+          <include name="Validatecredentials"/>
+          <include name="validateLoginSuccessfullpage"/>
+        </methods>
+      </class> <!-- Guru99.Loginpagetest -->
+      <class name="Guru99.Registerpageclass">
+        <methods>
+          <include name="Validatemailinfo"/>
+          <include name="setup"/>
+          <include name="userinfo"/>
+          <include name="Validatecontactinfo"/>
+        </methods>
+      </class> <!-- Guru99.Registerpageclass -->
+      <class name="Guru99.Registersuccestest">
+        <methods>
+          <include name="validateusername"/>
+          <include name="Succespageurl"/>
+          <include name="validatename"/>
+        </methods>
+      </class> <!-- Guru99.Registersuccestest -->
+    </classes>
+  </test> <!-- Register page(failed) -->
+  <test thread-count="5" parallel="classes" name="Register page and login(failed)">
+    <parameter name="browsername" value="Firefox"/>
+    <classes>
+      <class name="Guru99.Loginpagetest">
+        <methods>
+          <include name="validateLoginSuccessfullpage"/>
+        </methods>
+      </class> <!-- Guru99.Loginpagetest -->
+      <class name="Guru99.Registersuccestest">
+        <methods>
+          <include name="Succespageurl"/>
+          <include name="validatename"/>
+        </methods>
+      </class> <!-- Guru99.Registersuccestest -->
+    </classes>
+  </test> <!-- Register page and login(failed) -->
+</suite> <!-- Failed suite [Guru99] -->
